@@ -1,46 +1,45 @@
+document.getElementById("formSubmit").addEventListener("submit", function (event) {
+    event.preventDefault();
+    var work = readwork();
+    insertNewRow(work);
+})
 
-function onFormSubmit() {
-    var formData = readFormData();
-    insertNewRecord(formData);
 
-}
+function readwork() {
 
-function readFormData() {
-    
-    var formData = {};
-    formData["title"] = document.getElementById("inputTitle").value;
-    formData["author"] = document.getElementById("inputAuthor").value;
-    formData["price"] = document.getElementById("inputPrix").value;
-    formData["date"] = document.getElementById("inputDate").value;
-    console.log(formData.date)
-    formData["language"] = document.getElementById("inputLanguage").value;
-    var cheackVal = document.getElementsByName("type");
-    for(var i = 0; i<cheackVal.length; i++){
-        if(cheackVal[i].checked){
-            formData["type"] = cheackVal[i].value
+    var work = {};
+    work["title"] = document.getElementById("inputTitle").value;
+    work["author"] = document.getElementById("inputAuthor").value;
+    work["price"] = parseFloat(document.getElementById("inputPrix").value);
+    work["date"] = document.getElementById("inputDate").value;
+    work["language"] = document.getElementById("inputLanguage").value;
+    var cheackValues = document.getElementsByName("workType");
+    for (var i = 0; i < cheackValues.length; i++) {
+        if (cheackValues[i].checked) {
+            work["type"] = cheackValues[i].value;
+            break;
         }
     }
-    return formData;
+    return work;
 }
 
 
 
-function insertNewRecord(data) {
-    var table = document.getElementById("table").getElementsByTagName('tbody')[0];
-    var newRow = table.insertRow(table.length);
-    cell1 = newRow.insertCell(0);
-    cell1.innerHTML = data.title;
+function insertNewRow(work) {
+    var tableBody = document.getElementById("worksTable").getElementsByTagName('tbody')[0];
+    var newRow = tableBody.insertRow(tableBody.length);
+    newRow.insertCell(0).innerHTML = work.title;
     cell2 = newRow.insertCell(1);
-    cell2.innerHTML = data.author;
+    cell2.innerHTML = work.author;
     cell3 = newRow.insertCell(2);
-    cell3.innerHTML = data.price;
+    cell3.innerHTML = work.price;
     cell4 = newRow.insertCell(3);
-    cell4.innerHTML = data.date;
+    cell4.innerHTML = work.date;
     cell5 = newRow.insertCell(4);
-    cell5.innerHTML = data.language
+    cell5.innerHTML = work.language
     cell6 = newRow.insertCell(5)
-    cell6.innerHTML = data.type
+    cell6.innerHTML = work.type
+    cell7 = newRow.insertCell(6)
+
 
 }
-
-

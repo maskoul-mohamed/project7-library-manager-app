@@ -28,7 +28,7 @@
                      
                         <div>
 
-                            <form  onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                            <form id="formSubmit" autocomplete="off">
                                 <div class="col-md-6">
                                     <label for="inputTitle" >Title</label>
                                     <input type="text"  id="inputTitle">
@@ -55,22 +55,22 @@
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <label for="type" class="form-label">Type</label>
+                                    <label for="workType" class="form-label">Type</label>
                                     <div>
-                                        <input value="Roman" name="type" type="radio" id="gridCheck">
+                                        <input value="Roman" name="workType" type="radio" id="gridCheck">
                                         <label for="gridCheck">
                                             Roman
                                         </label>
                                     </div>
                                     <div>
-                                        <input value="Essai" name="type" type="radio" id="gridCheck">
+                                        <input value="Essai" name="workType" type="radio" id="gridCheck">
                                         <label  for="gridCheck">
                                             Essai
                                         </label>
                                     </div>
 
                                     <div>
-                                        <input  name="type" value="Bande-Dessinée" type="radio" id="gridCheck">
+                                        <input  name="workType" value="Bande-Dessinée" type="radio" id="gridCheck">
                                         <label  for="gridCheck">
                                             Bande-Dessinée
                                         </label>
@@ -78,7 +78,7 @@
 
                                 </div>
                                 <div>
-                                    <button  type="submit">Ajouter</button>
+                                    <button id="submitButton" type="submit">Ajouter</button>
                                 </div>
                             </form>
 
@@ -88,7 +88,7 @@
                             📘
                         </div>
                         <div class="card-body">
-                            <table class="table" id="table">
+                            <table class="table" id="worksTable">
                                 <thead>
                                     <tr>
                                         <th>Titre</th>
