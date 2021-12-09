@@ -28,7 +28,7 @@ it can edit or delete any row in the table.
 - HTML5; 
 - CSS3;
 - Javascript
-- Bootstrap
+- Bootstrap v5.0
 
 ## Author
 
