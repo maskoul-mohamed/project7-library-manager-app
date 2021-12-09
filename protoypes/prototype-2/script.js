@@ -6,7 +6,7 @@ document.getElementById("formSubmit").addEventListener("submit", function (event
         if (selectedRow == null)
             insertNewRow(work);
         else
-        if (confirm("Êtes-vous sûr de modifier ce travail?"))
+        if (confirm("Êtes-vous sûr de modifier cette œuvre?"))
             editRow(work)
         resetForm();
     } else {
