@@ -1,8 +1,24 @@
+var selectedRow = null
 document.getElementById("formSubmit").addEventListener("submit", function (event) {
     event.preventDefault();
     var work = readwork();
-    insertNewRow(work);
+    if (selectedRow == null)
+        insertNewRow(work);
+    else
+        if(confirm("Êtes-vous sûr de modifier ce travail?"))
+            editRow(work)
+    resetForm();
 })
+
+function resetForm() {
+    document.getElementById("inputTitle").value = "";
+    document.getElementById("inputAuthor").value = "";
+    document.getElementById("inputPrix").value = "";
+    document.getElementById("inputDate").value = "";
+    document.getElementById("inputLanguage").value = "";
+    document.getElementById("typeWork").value = "";
+    selectedRow = null;
+}
 
 var onEditButton = document.getElemen
 
@@ -48,6 +64,7 @@ function insertNewRow(work) {
     var editContent = document.createTextNode("Edit")
     editButton.appendChild(editContent)
     editButton.className = "btn btn-primary"
+    editButton.setAttribute('onclick', 'onEdit(this)')
 
     var deleteContent = document.createTextNode('Delete')
     deleteButton.appendChild(deleteContent)
@@ -59,12 +76,33 @@ function insertNewRow(work) {
 
 }
 
+function onEdit(td) {
+    selectedRow = td.parentElement.parentElement;
+    document.getElementById("inputTitle").value = selectedRow.cells[0].innerHTML;
+    document.getElementById("inputAuthor").value = selectedRow.cells[1].innerHTML;
+    document.getElementById("inputPrix").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("inputDate").value = selectedRow.cells[3].innerHTML;
+    document.getElementById("inputLanguage").value = selectedRow.cells[4].innerHTML;
+    document.getElementById("typeWork").value = selectedRow.cells[5].innerHTML;
+
+}
+
+function editRow(workToEdit) {
+    selectedRow.cells[0].innerHTML = workToEdit.title;
+    selectedRow.cells[1].innerHTML = workToEdit.author;
+    selectedRow.cells[2].innerHTML = workToEdit.price;
+    selectedRow.cells[3].innerHTML = workToEdit.date;
+    selectedRow.cells[4].innerHTML = workToEdit.language;
+    selectedRow.cells[5].innerHTML = workToEdit.type;
+
+}
 
 
 
-function onDelete(td){
-    if(confirm("Êtes-vous sûr de supprimer cette œuvre?")){
+function onDelete(td) {
+    if (confirm("Êtes-vous sûr de supprimer cette œuvre?")) {
         row = td.parentElement.parentElement;
         document.getElementById("worksTable").deleteRow(row.rowIndex)
     }
 }
+
