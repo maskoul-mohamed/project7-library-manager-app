@@ -16,7 +16,7 @@ function resetForm() {
     document.getElementById("inputPrix").value = "";
     document.getElementById("inputDate").value = "";
     document.getElementById("inputLanguage").value = "";
-    document.getElementById("typeWork").value = "";
+    document.querySelector('input[name="workType"]:checked').checked=false
     selectedRow = null;
 }
 
@@ -30,13 +30,7 @@ function readwork() {
     work["price"] = parseFloat(document.getElementById("inputPrix").value);
     work["date"] = document.getElementById("inputDate").value;
     work["language"] = document.getElementById("inputLanguage").value;
-    var cheackValues = document.getElementsByName("workType");
-    for (var i = 0; i < cheackValues.length; i++) {
-        if (cheackValues[i].checked) {
-            work["type"] = cheackValues[i].value;
-            break;
-        }
-    }
+    work["type"] = document.querySelector('input[name="workType"]:checked').value
     return work;
 }
 
@@ -83,8 +77,13 @@ function onEdit(td) {
     document.getElementById("inputPrix").value = selectedRow.cells[2].innerHTML;
     document.getElementById("inputDate").value = selectedRow.cells[3].innerHTML;
     document.getElementById("inputLanguage").value = selectedRow.cells[4].innerHTML;
-    document.getElementById("typeWork").value = selectedRow.cells[5].innerHTML;
 
+    var checkValue = document.getElementsByName("workType");
+    for(var i = 0; i < checkValue.length; i++){
+        if(checkValue[i].value == selectedRow.cells[5].innerHTML){
+            checkValue[i].checked = true
+        }
+    }
 }
 
 function editRow(workToEdit) {
@@ -105,4 +104,5 @@ function onDelete(td) {
         document.getElementById("worksTable").deleteRow(row.rowIndex)
     }
 }
+
 
