@@ -28,23 +28,23 @@
                             <form id="formSubmit" autocomplete="off">
                                 <div class="col-md-6">
                                     <label for="inputTitle" >Title</label>
-                                    <input type="text"  id="inputTitle">
+                                    <input required type="text"  id="inputTitle">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputAuthor" >Author</label>
-                                    <input type="text" id="inputAuthor">
+                                    <input required type="text" id="inputAuthor">
                                 </div>
                                 <div class="col-12">
                                     <label for="inputPrix" >Prix</label>
-                                    <input type="number" id="inputPrix">
+                                    <input required type="number" id="inputPrix">
                                 </div>
                                 <div class="col-12">
                                     <label for="inputDate">Date de </label>
-                                    <input type="date" id="inputDate">
+                                    <input required type="date" id="inputDate">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputLanguage">Langue</label>
-                                    <select id="inputLanguage">
+                                    <select required id="inputLanguage">
                                         <option value="" disabled selected>choisir...</option>
                                         <option value="français">Français</option>
                                         <option value="anglais">Anglais</option>
@@ -54,20 +54,20 @@
                                 <div class="col-12">
                                     <label for="workType" class="form-label">Type</label>
                                     <div>
-                                        <input value="Roman" name="workType" type="radio" id="gridCheck">
+                                        <input required value="Roman" name="workType" type="radio" id="gridCheck">
                                         <label for="gridCheck">
                                             Roman
                                         </label>
                                     </div>
                                     <div>
-                                        <input value="Essai" name="workType" type="radio" id="gridCheck">
+                                        <input required value="Essai" name="workType" type="radio" id="gridCheck">
                                         <label  for="gridCheck">
                                             Essai
                                         </label>
                                     </div>
 
                                     <div>
-                                        <input  name="workType" value="Bande-Dessinée" type="radio" id="gridCheck">
+                                        <input required  name="workType" value="Bande-Dessinée" type="radio" id="gridCheck">
                                         <label  for="gridCheck">
                                             Bande-Dessinée
                                         </label>

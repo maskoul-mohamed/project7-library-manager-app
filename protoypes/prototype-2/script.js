@@ -1,13 +1,17 @@
 var selectedRow = null
 document.getElementById("formSubmit").addEventListener("submit", function (event) {
     event.preventDefault();
-    var work = readwork();
-    if (selectedRow == null)
-        insertNewRow(work);
-    else
-        if(confirm("Êtes-vous sûr de modifier ce travail?"))
+    if (validate()) {
+        var work = readwork();
+        if (selectedRow == null)
+            insertNewRow(work);
+        else
+        if (confirm("Êtes-vous sûr de modifier ce travail?"))
             editRow(work)
-    resetForm();
+        resetForm();
+    } else {
+        alert("S'il-vous-plaît remplissez tous les champs requis")
+    }
 })
 
 function resetForm() {
@@ -16,7 +20,7 @@ function resetForm() {
     document.getElementById("inputPrix").value = "";
     document.getElementById("inputDate").value = "";
     document.getElementById("inputLanguage").value = "";
-    document.querySelector('input[name="workType"]:checked').checked=false
+    document.querySelector('input[name="workType"]:checked').checked = false
     selectedRow = null;
 }
 
@@ -79,8 +83,8 @@ function onEdit(td) {
     document.getElementById("inputLanguage").value = selectedRow.cells[4].innerHTML;
 
     var checkValue = document.getElementsByName("workType");
-    for(var i = 0; i < checkValue.length; i++){
-        if(checkValue[i].value == selectedRow.cells[5].innerHTML){
+    for (var i = 0; i < checkValue.length; i++) {
+        if (checkValue[i].value == selectedRow.cells[5].innerHTML) {
             checkValue[i].checked = true
         }
     }
@@ -106,3 +110,25 @@ function onDelete(td) {
 }
 
 
+function validate() {
+    var isValid = true;
+    if (document.getElementById("inputTitle").value == "") {
+        isValid = false;
+    }
+    if (document.getElementById("inputAuthor").value == "") {
+        isValid = false;
+    } 
+    if (document.getElementById("inputPrix").value == "") {
+        isValid = false;
+    } 
+    if (document.getElementById("inputDate").value == "") {
+        isValid = false;
+    } 
+    if (document.getElementById("inputLanguage").value == "") {
+        isValid = false;
+    } 
+    if (document.querySelector('input[name="workType"]').value == null) {
+        isValid = false;
+    }  
+    return isValid;
+}
