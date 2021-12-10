@@ -30,8 +30,6 @@ function resetForm() {
     selectedRow = null;
 }
 
-var onEditButton = document.getElemen
-
 function readwork() {
 
     var work = {};

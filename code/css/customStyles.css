@@ -1,0 +1,30 @@
+nav {
+    background-color: #FDA050 !important;
+}
+
+a {
+    color: #3D412C !important;
+}
+.sb-sidenav-custom {
+    background-color: #D3BEAB !important;
+}
+
+.btn-primary-custom {
+    background-color: #fff0de !important;
+    border-color: #ab8a65;
+    color: #3D412C;
+}
+
+.btn-primary-custom:hover {
+    background-color: #ab8a65 !important;
+    border-color: #3D412C;
+    color: #fff0de;
+}
+
+.btn-primary-custom:active, .btn-primary-custom.active {
+    background-color: #ab8a65 !important;
+    border-color: #3D412C;
+    color: #fff0de;
+    box-shadow: none;
+
+  }
