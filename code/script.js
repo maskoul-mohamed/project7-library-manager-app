@@ -1,4 +1,9 @@
 var selectedRow = null
+document.getElementById("show").addEventListener("onclick", function() {
+    var formCard = document.getElementById('formCard')
+    formCard.className("")
+})
+
 document.getElementById("formSubmit").addEventListener("submit", function (event) {
     event.preventDefault();
     if (validate()) {
@@ -43,17 +48,29 @@ function readwork() {
 function insertNewRow(work) {
     var tableBody = document.getElementById("worksTable").getElementsByTagName('tbody')[0];
     var newRow = tableBody.insertRow(tableBody.length);
-    newRow.insertCell(0).innerHTML = work.title;
+    cell1 = newRow.insertCell(0)
+    cell1.innerHTML = work.title;
+
     cell2 = newRow.insertCell(1);
     cell2.innerHTML = work.author;
+    cell2.className = "d-none d-lg-table-cell"
+
     cell3 = newRow.insertCell(2);
     cell3.innerHTML = work.price;
+    cell3.className = "d-none d-lg-table-cell"
+
     cell4 = newRow.insertCell(3);
     cell4.innerHTML = work.date;
+    cell4.className = "d-none d-lg-table-cell"
+
     cell5 = newRow.insertCell(4);
     cell5.innerHTML = work.language
+
     cell6 = newRow.insertCell(5)
     cell6.innerHTML = work.type
+    cell6.className = "d-none d-lg-table-cell"
+
+
     cell7 = newRow.insertCell(6)
 
     var editButton = document.createElement("button")
@@ -133,3 +150,4 @@ function validate() {
     }  
     return isValid;
 }
+
