@@ -77,12 +77,12 @@ function insertNewRow(work) {
 
     var editContent = document.createTextNode("Modifier")
     editButton.appendChild(editContent)
-    editButton.className = "btn btn-primary me-1"
+    editButton.className = "btn btn-primary-custom me-1"
     editButton.setAttribute('onclick', 'onEdit(this)')
 
     var deleteContent = document.createTextNode('Supprimer')
     deleteButton.appendChild(deleteContent)
-    deleteButton.className = "btn btn-secondary"
+    deleteButton.className = "btn btn-secondary-custom"
     deleteButton.setAttribute("onclick", 'onDelete(this)')
 
     cell7.appendChild(editButton)
