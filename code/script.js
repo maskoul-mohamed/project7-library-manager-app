@@ -106,6 +106,7 @@ function onDelete(buttonReference) {
     if (confirm("Êtes-vous sûr de supprimer cette œuvre?")) {
         row = buttonReference.parentElement.parentElement;
         document.getElementById("worksTable").deleteRow(row.rowIndex)
+        resetForm()
     }
 }
 
