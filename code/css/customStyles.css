@@ -1,50 +1,50 @@
 nav {
-    background-color: #FDA050 !important;
+    background-color: #D3BEAB !important;
 }
 
 a {
     color: #3D412C !important;
 }
 .sb-sidenav-custom {
-    background-color: #D3BEAB !important;
+    background-color: #F0EBE8 !important;
 }
 
 .btn-primary-custom {
-    background-color: #fff0de !important;
-    border-color: #ab8a65;
-    color: #3D412C;
+    background-color: #EC8F1F !important;
+    border-color: #FDA050 !important;
+    color: #F0EBE8 !important;
 }
 
 .btn-primary-custom:hover {
-    background-color: #ab8a65 !important;
-    border-color: #3D412C;
-    color: #FAF9F8;
+    background-color: #F0EBE8 !important;
+    border-color: #FDA050 !important;
+    color: #EC8F1F !important;
 }
 
 .btn-primary-custom:active, .btn-primary-custom.active {
-    background-color: #ab8a65 !important;
-    border-color: #3D412C;
-    color: #fff0de;
+  background-color: #EC8F1F !important;
+  border-color: #FDA050 !important;
+  color: #F0EBE8 !important;
     box-shadow: none;
 
   }
 
   .btn-secondary-custom {
     background-color: #6A8490 !important;
-    border-color: #B08D51;
+    border-color: #3D412C;
     color: #FAF9F8;
     
   }
   .btn-secondary-custom:hover {
-    background-color: #612E2D !important;
+    background-color: #FAF9F8 !important;
     border-color: #3D412C;
-    color: #FAF9F8;
+    color: #6A8490;
 }
 
 .btn-secondary-custom:active, .btn-secondary-custom.active {
-    background-color: #612E2D !important;
+  background-color: #6A8490 !important;
     border-color: #3D412C;
-    color: #fff0de;
+    color: #FAF9F8;
     box-shadow: none;
 
   }
@@ -53,7 +53,6 @@ a {
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
