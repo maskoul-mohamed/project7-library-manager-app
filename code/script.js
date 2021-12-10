@@ -74,8 +74,8 @@ function insertNewRow(work) {
 
 }
 
-function onEdit(td) {
-    selectedRow = td.parentElement.parentElement;
+function onEdit(buttonReference) {
+    selectedRow = buttonReference.parentElement.parentElement;
     document.getElementById("inputTitle").value = selectedRow.cells[0].innerHTML;
     document.getElementById("inputAuthor").value = selectedRow.cells[1].innerHTML;
     document.getElementById("inputPrix").value = selectedRow.cells[2].innerHTML;
@@ -102,9 +102,9 @@ function editRow(workToEdit) {
 
 
 
-function onDelete(td) {
+function onDelete(buttonReference) {
     if (confirm("Êtes-vous sûr de supprimer cette œuvre?")) {
-        row = td.parentElement.parentElement;
+        row = buttonReference.parentElement.parentElement;
         document.getElementById("worksTable").deleteRow(row.rowIndex)
     }
 }
