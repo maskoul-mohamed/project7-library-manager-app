@@ -1,7 +1,7 @@
 var selectedRow = null
-document.getElementById("show").addEventListener("onclick", function() {
+document.getElementById("showFormBtn").addEventListener("click", function() {
     var formCard = document.getElementById('formCard')
-    formCard.className("")
+    formCard.classList.toggle("d-none")
 })
 
 document.getElementById("formSubmit").addEventListener("submit", function (event) {
@@ -14,6 +14,7 @@ document.getElementById("formSubmit").addEventListener("submit", function (event
         if (confirm("Êtes-vous sûr de modifier cette œuvre?"))
             editRow(work)
         resetForm();
+        document.getElementById('formCard').className = "d-none"
     } else {
         alert("S'il-vous-plaît remplissez tous les champs requis")
     }
@@ -92,6 +93,7 @@ function insertNewRow(work) {
 }
 
 function onEdit(buttonReference) {
+    document.getElementById('formCard').classList.remove("d-none")
     selectedRow = buttonReference.parentElement.parentElement;
     document.getElementById("inputTitle").value = selectedRow.cells[0].innerHTML;
     document.getElementById("inputAuthor").value = selectedRow.cells[1].innerHTML;
