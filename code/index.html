@@ -14,7 +14,7 @@
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.html">Gestion des ouvrages</a>
+        <a class="navbar-brand ps-3" href="index.html">Gestion des ouvrages v1</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
                 class="fas fa-bars"></i></button>
@@ -27,37 +27,28 @@
 
                         <a class="nav-link" href="index.html">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Tableau de bord
-                        </a>
-
-                        <a class="nav-link" href="gestion-ouvrages.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
-                            Ouvrages
+                            Dashboard
                         </a>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    Start Bootstrap
+                    🐱‍👤Hackerman
                 </div>
             </nav>
         </div>
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Ouvrages</h1>
-                    <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item"><a href="index.html">Tableau de bord</a></li>
-                        <li class="breadcrumb-item active">Ouvrages</li>
-                    </ol>
+                    <h1 class="mt-4">Tableau de bord</h1>
                     <div class="card mb-4">
 
                         <div class="card-header">
-                            <div>📝Ouvrages</div>
+                            <div>📝Formulaire</div>
                         </div>
                         <div class="card-body">
 
-                            <form id="formSubmit"  class="row g-3">
+                            <form id="formSubmit" class="row g-3">
                                 <div class="col-md-6">
                                     <label for="inputTitle" class="form-label">Title</label>
                                     <input required type="text" class="form-control" id="inputTitle">
@@ -68,7 +59,7 @@
                                 </div>
                                 <div class="col-12">
                                     <label for="inputPrix" class="form-label">Prix</label>
-                                    <input required type="number" step=any  class="form-control" id="inputPrix">
+                                    <input required type="number" step=any class="form-control" id="inputPrix">
                                 </div>
                                 <div class="col-12">
                                     <label for="inputDate" class="form-label">Date de </label>
@@ -87,20 +78,23 @@
                                 <div class="col-12">
                                     <label for="workType" class="form-label">Type</label>
                                     <div class="form-check">
-                                        <input required class="form-check-input" name="workType" value="Roman" type="radio" id="gridCheck">
+                                        <input required class="form-check-input" name="workType" value="Roman"
+                                            type="radio" id="gridCheck">
                                         <label class="form-check-label" for="gridCheck">
                                             Roman
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input required class="form-check-input" name="workType" value="Essai" type="radio" id="gridCheck">
+                                        <input required class="form-check-input" name="workType" value="Essai"
+                                            type="radio" id="gridCheck">
                                         <label class="form-check-label" for="gridCheck">
                                             Essai
                                         </label>
                                     </div>
 
                                     <div class="form-check">
-                                        <input required class="form-check-input" name="workType" value="Bande-Dessinée"  type="radio" id="gridCheck">
+                                        <input required class="form-check-input" name="workType" value="Bande-Dessinée"
+                                            type="radio" id="gridCheck">
                                         <label class="form-check-label" for="gridCheck">
                                             Bande-Dessinée
                                         </label>
@@ -116,7 +110,7 @@
                     </div>
                     <div class="card mb-4">
                         <div class="card-header">
-                            📘
+                            📘Ouvrages 
                         </div>
                         <div class="card-body">
                             <table class="table" id="worksTable">
