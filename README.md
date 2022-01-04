@@ -20,7 +20,7 @@ it can edit or delete any row in the table.
 
 ## Preview
 
-<img src="https://github.com/maskoul-mohamed/project7-library-manager-app-v1/blob/main/Screenshot%202021-12-09%20at%2015-57-23%20Gestion%20des%20ouvrages.png" width="400" display="inline">
+<img src="https://github.com/maskoul-mohamed/project7-library-manager-app-v1/blob/main/Screenshot-project-7.png" width="400" display="inline">
 
 
 ## Built With
