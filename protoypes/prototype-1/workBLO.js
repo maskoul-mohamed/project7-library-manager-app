@@ -3,7 +3,6 @@ class WorkBLO {
     counter = 0;
 
     addWork(work) {
-        
         this.workList.push(work)
     }
 
