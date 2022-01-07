@@ -1,6 +1,6 @@
 var workBLO = new WorkBLO();
 
-var selectedRow = null
+var selectedRow = null;
 
 
 document.getElementById("formSubmit").addEventListener("submit", function (event) {
@@ -8,7 +8,7 @@ document.getElementById("formSubmit").addEventListener("submit", function (event
     var work = readwork();
     if (selectedRow == null) {
         work.id = workBLO.counter
-        workBLO.counter++;
+        // workBLO.counter++;
         insertNewRow(work);
         workBLO.addWork(work);
     } else

@@ -1,15 +1,21 @@
 class WorkBLO {
-    workList = [];
-    counter = 0;
+    #workList = [];
+    #counter = 1;
+
+    get workList(){
+        return this.#workList;
+    }
 
     addWork(work) {
-        this.workList.push(work)
+        this.#counter = this.#counter + 1
+        work.id = this.#counter
+        this.#workList.push(work)
     }
 
     editWork(work) {
-        for (var i = 0; i < this.workList.length; i++) {
-            if (work.id == this.workList[i].id) {
-                this.workList[i] = work
+        for (var i = 0; i < this.#workList.length; i++) {
+            if (work.id == this.#workList[i].id) {
+                this.#workList[i] = work
                 return work
             }
         }
