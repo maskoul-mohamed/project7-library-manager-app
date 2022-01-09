@@ -13,6 +13,7 @@ class WorkBLO {
     }
 
     editWork(work) {
+        console.log(work)
         for (var i = 0; i < this.#workList.length; i++) {
             if (work.id == this.#workList[i].id) {
                 this.#workList[i] = work
@@ -34,5 +35,18 @@ class WorkBLO {
        this.#workList =  this.#workList.filter(function(work){
             return work.id != id
         })
+    }
+
+
+    getAllItems() {
+        return this.#workList.sort(function(a, b) {
+            return a.title.localeCompare(b.title)
+        })
+        // return this.#workList.sort(function (a, b) {
+        //     if(a.title > b.title){ return -1}
+        //     if(a.title < b.title){ return 1}
+
+        //     return 0
+        // })
     }
 }
