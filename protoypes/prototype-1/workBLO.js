@@ -1,6 +1,6 @@
 class WorkBLO {
     #workList = [];
-    #counter = 1;
+    #counter = 0;
 
     get workList(){
         return this.#workList;
@@ -28,5 +28,11 @@ class WorkBLO {
                 return this.workList[i]
             }
         }
+    }
+
+    deleteWork(id) {
+       this.#workList =  this.#workList.filter(function(work){
+            return work.id != id
+        })
     }
 }

@@ -7,10 +7,10 @@ document.getElementById("formSubmit").addEventListener("submit", function (event
     event.preventDefault();
     var work = readwork();
     if (selectedRow == null) {
-        work.id = workBLO.counter
+        //work.id = workBLO.counter
         // workBLO.counter++;
-        insertNewRow(work);
         workBLO.addWork(work);
+        insertNewRow(work);
     } else
     if (confirm("Êtes-vous sûr de modifier cette œuvre?"))
         editRow(work)
@@ -71,4 +71,18 @@ function onEdit(buttonReference) {
 function editRow(workToEdit) {
     workBLO.editWork(workToEdit)
     selectedRow.cells[1].innerHTML = workToEdit.title;
+}
+
+
+function onDelete(buttonReference) {
+    if (confirm("Êtes-vous sûr de supprimer cette œuvre?")) {
+        var row = buttonReference.parentElement.parentElement;
+        var rowId = row.cells[0].innerHTML
+
+        document.getElementById("worksTable").deleteRow(row.rowIndex)
+        
+        workBLO.deleteWork(rowId)
+        resetForm()
+        console.log(workBLO.workList)
+    }
 }
