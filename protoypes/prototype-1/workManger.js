@@ -1,4 +1,4 @@
-class WorkBLO {
+class WorkManager {
     #workList = [];
     #counter = 0;
 
