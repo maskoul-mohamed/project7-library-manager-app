@@ -15,6 +15,7 @@ document.getElementById("formSubmit").addEventListener("submit", function (event
         // work.id = workManager.counter
         // workManager.counter++;
         workManager.addWork(work);
+        alert(work.workDetail())
     } else
     if (confirm("Êtes-vous sûr de modifier cette œuvre?")){
         work.id = rowId;
