@@ -116,10 +116,12 @@
                         <div class="card-header">
                             📘Ouvrages
                         </div>
-                        <div class="card-body">
+                        <div class="card-body" id="card-body">
                             <table class="table" id="worksTable">
+                                <button onclick="onPrint()">print</button>
                                 <thead>
                                     <tr>
+                                        <th>ID</th>
                                         <th>Titre</th>
                                         <th class="d-none d-lg-table-cell">Auteur</th>
                                         <th class="d-none d-lg-table-cell">Prix</th>
@@ -151,6 +153,8 @@
             </footer>
         </div>
     </div>
+    <script src="work.js"></script>
+    <script src="workManager.js"></script>
     <script src="script.js"></script>
 
 </body>
