@@ -1,7 +1,7 @@
 # project7-library-manager-app
 
 
-<h4 align="center"><a href="https://maskoul-mohamed.github.io/project7-library-manager-app-v1/src/index.html">Live version >></a></h4>
+<h4 align="center"><a href="https://maskoul-mohamed.github.io/project7-library-manager-app/src/index.html">Live version >></a></h4>
 
 
 ## Table of Contents
